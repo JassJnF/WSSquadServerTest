@@ -1,0 +1,74 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://opentable.com/htng/otsquad"
+           targetNamespace="http://opentable.com/htng/otsquad" elementFormDefault="qualified">
+
+    <xs:element name="getOTSquad">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="squadName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMemberSquads">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="memberName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MemberSquadsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="squads" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addMemberToSquad">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="memberName" type="xs:string"/>
+                <xs:element name="squadName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addMemberToSquadResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="OTSquadResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="otsquad" type="tns:OTSquad"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--object name-->
+    <xs:complexType name="OTSquad">
+        <xs:sequence>
+            <!--object fields-->
+            <xs:element name="squadName" type="xs:string" minOccurs="1" />
+            <xs:element name="members" type="tns:OTMember" maxOccurs="unbounded"/>
+            <xs:element name="id" type="xs:int" minOccurs="1" />
+            <xs:element name="totalMembers" type="xs:int" minOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--object name-->
+    <xs:complexType name="OTMember">
+        <xs:sequence>
+            <!--object fields-->
+            <xs:element name="squads" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="name" type="xs:string" minOccurs="1" />
+            <xs:element name="id" type="xs:int" minOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
