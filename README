@@ -1,0 +1,7 @@
+To run the server, get into the directory of the mvnw in a console and write:
+./mvnw spring-boot:run
+
+To make a request to the server go to the directory of the request.xml file (currently in the same directory as mvnw) and write in a console:
+curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
+
+There are different examples in request.xml file.
