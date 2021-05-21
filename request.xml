@@ -1,9 +1,19 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-				  xmlns:gs="http://spring.io/guides/gs-producing-web-service">
+﻿<!--soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://opentable.com/htng/otsquad">
    <soapenv:Header/>
    <soapenv:Body>
-      <gs:getCountryRequest>
-         <gs:name>Spain</gs:name>
-      </gs:getCountryRequest>
+      <gs:getMemberSquads>
+         <gs:memberName>jasson</gs:memberName>
+      </gs:getMemberSquads>
+   </soapenv:Body>
+</soapenv:Envelope-->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://opentable.com/htng/otsquad">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getOTSquad>
+         <gs:squadName>INTEGRATIONS</gs:squadName>
+      </gs:getOTSquad>
    </soapenv:Body>
 </soapenv:Envelope>
