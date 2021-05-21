@@ -9,11 +9,22 @@
 </soapenv:Envelope-->
 
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-				  xmlns:gs="http://opentable.com/htng/otsquad">
+                  xmlns:gs="http://opentable.com/htng/otsquad">
    <soapenv:Header/>
    <soapenv:Body>
       <gs:getOTSquad>
-         <gs:squadName>INTEGRATIONS</gs:squadName>
+         <gs:squadName>PUPS</gs:squadName>
       </gs:getOTSquad>
    </soapenv:Body>
 </soapenv:Envelope>
+
+        <!--soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                          xmlns:gs="http://opentable.com/htng/otsquad">
+           <soapenv:Header/>
+           <soapenv:Body>
+              <gs:addMemberToSquad>
+                 <gs:squadName>PUPS</gs:squadName>
+                 <gs:memberName>DMITRY</gs:memberName>
+              </gs:addMemberToSquad>
+           </soapenv:Body>
+        </soapenv:Envelope-->
