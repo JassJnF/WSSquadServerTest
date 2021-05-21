@@ -9,8 +9,6 @@ import javax.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
-import com.opentable.htng.otsquad.Country;
-import com.opentable.htng.otsquad.Currency;
 import com.opentable.htng.otsquad.OTMember;
 import com.opentable.htng.otsquad.OTSquad;
 import com.opentable.htng.otsquad.OTSquadResponse;
